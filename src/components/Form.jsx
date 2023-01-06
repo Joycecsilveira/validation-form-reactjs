@@ -20,11 +20,10 @@ const Form = () => {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		//  Verificar se existem campos vazios, não preenchidos.
+		
 		let emptyValues = Object.values(form).some((obj) => obj === '');
 		setEmptyValues(emptyValues);
 
-		//  Verificar se o email é válido
 		let validEmail = form['email']
 			.toLocaleLowerCase()
 			.match(/[a-z]+@[a-z]+\.com(\.br)*/);
